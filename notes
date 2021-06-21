@@ -1,0 +1,13 @@
+1) A Python file has the extension .py so it can be ran using python ID.py 
+
+2) use the main to call your function in the desired logic...
+
+        if __name__ == "__main__":
+            call_functions()
+
+3) Work in branches 
+
+4) Fix the logic on your code.
+    a) it runs only once
+    b) after taking in the ID number it does nothing
+

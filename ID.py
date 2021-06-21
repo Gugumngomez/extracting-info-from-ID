@@ -10,7 +10,7 @@ def ID():#calling function to validate ID
             print("Correct")
         else:
             return id
-id = ID()
+#id = ID() # calling this in the main 
 
 def age(dateofbirth):
     year = dateofbirth[:2]
@@ -27,7 +27,7 @@ def calculate_Age(dateofbirth):
     age_one = time_difference
     return age_one
 
-def gender():
+def gender(): # make this function just like all functions take an argument to execute the code.
     if int(gender) in range(0000, 4999):
         return"female"
     elif int(gender) in range(5000, 9999):
@@ -35,7 +35,7 @@ def gender():
     else:
         return"Error"
 
-def citizenship():
+def citizenship(): # make this function just like all functions take an argument to execute the code.
     if int(id[10]) == 0:
         return"South African Citizen"
     elif int(id[10]) ==1:
@@ -53,3 +53,10 @@ def citizenship():
         print("empty string")
         
         exit()
+
+#Adding a main at the bottom of your file 
+if __name__ == "__main__":
+    print("hello Gugu")
+    id = ID()
+    print(id)
+    print("goood bye Gugu")
