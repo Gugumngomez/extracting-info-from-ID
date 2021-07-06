@@ -1,30 +1,30 @@
 import string
 from datetime import datetime #importing the date module to calculate age
 
+
 def ID():#calling function to validate ID
-
+    id = input("Please enter your ID number:")
     while True:
+        if len(id) == 13 and id.isdecimal():
+            print("Valid")
+            return id
+        id = input("Please make sure your ID number is valid:")
+#validate the ID        
 
-        id = input("Please enter your ID number:")
-        return id
-    
-def main():
-    id = ID()
-    if len(id) == 13 and string.digits == True:
-        print("Welcome")
-    
+def getBirthDay(id):
     year = id[:2]
     month = id[2:4]
     day = id[4:6]
     formatday = "%d/%m/%Y"
-    birth_day =(f"{year}/{month}/{day}", formatday)
     print("Your birthday: " + year + "/" + month + "/" + day )
-    
 
+def getGender(id):
     if int(id[7:10]) in range(0000, 4999):
-        print("female")
+        return("female")
     elif int(id[7:10]) in range(5000, 9999):
-        print("male")
+        return("male")
+
+def workMagic(id):
 
     if int(id[10]) == 0:
         print("SA Citizen")
@@ -40,4 +40,7 @@ def main():
         
 
 if __name__ == "__main__":
-    main()
+    theID = ID()
+    getBirthDay(theID)
+    print(getGender())
+    workMagic(theID)
